@@ -38,6 +38,12 @@
       </div>
     </div>
 
+      <!-- Display Card2 of Question And Answers Here -->
+      <div id="card-con">
+        <div class="card-list-container"></div>
+      </div>
+    </div>
+
     <!-- Input form for users to fill question and answer -->
     <div class="question-container hide" id="add-question-card">
       <h2>Add Flashcard</h2>
@@ -67,9 +73,9 @@
       <button id="save-btn">Save</button>
     </div>
 	  
-    <!-- Input form for users to search word and get answers -->
-    <div class="search-container hide" id="search">
-      <h2>Search</h2>
+    <!-- Input form for users to fill question and answer -->
+    <div class="question-container hide" id="add-question-card">
+      <h2>Add Flashcard</h2>
       <div class="wrapper">
         <!-- Error message -->
         <div class="error-con">
@@ -79,19 +85,19 @@
         <i class="fa-solid fa-xmark" id="close-btn"></i>
       </div>
 
-      <label for="search word">Question:</label>
+      <label for="question">Question:</label>
       <textarea
         class="input"
-        id="search"
-        placeholder="Search word here..."
+        id="question"
+        placeholder="Type the question here..."
         rows="2"
       ></textarea>
-      <label for="search results">Answer:</label>
+      <label for="answer">Answer:</label>
       <textarea
         class="input"
-        id="search-answer"
+        id="answer"
         rows="4"
-        placeholder="Output the answer here..."
+        placeholder="Type the answer here..."
       ></textarea>
       <button id="save-btn">Save</button>
     </div>

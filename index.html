@@ -66,6 +66,35 @@
       ></textarea>
       <button id="save-btn">Save</button>
     </div>
+	  
+    <!-- Input form for users to search word and get answers -->
+    <div class="search-container hide" id="search">
+      <h2>Search</h2>
+      <div class="wrapper">
+        <!-- Error message -->
+        <div class="error-con">
+          <span class="hide" id="error">Input fields cannot be empty!</span>
+        </div>
+        <!-- Close Button -->
+        <i class="fa-solid fa-xmark" id="close-btn"></i>
+      </div>
+
+      <label for="search word">Question:</label>
+      <textarea
+        class="input"
+        id="search"
+        placeholder="Search word here..."
+        rows="2"
+      ></textarea>
+      <label for="search results">Answer:</label>
+      <textarea
+        class="input"
+        id="search-answer"
+        rows="4"
+        placeholder="Output the answer here..."
+      ></textarea>
+      <button id="save-btn">Save</button>
+    </div>
 
     <!-- Script -->
     <script src="script.js"></script>

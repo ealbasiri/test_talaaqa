@@ -15,7 +15,26 @@ addQuestion.addEventListener("click", () => {
   answer.value = "";
   addQuestionCard.classList.remove("hide");
 });
+//Add question when user clicks 'Add Flashcard' button
+addQuestion.addEventListener("click", () => {
+  container.classList.add("hide");
+  question.value = "";
+  answer.value = "";
+  addQuestionCard.classList.remove("hide");
+});
 
+//Hide Create flashcard Card
+closeBtn.addEventListener(
+  "click",
+  (hideQuestion = () => {
+    container.classList.remove("hide");
+    addQuestionCard.classList.add("hide");
+    if (editBool) {
+      editBool = false;
+      submitQuestion();
+    }
+  })
+);
 //Hide Create flashcard Card
 closeBtn.addEventListener(
   "click",
@@ -47,7 +66,24 @@ cardButton.addEventListener(
     }
   })
 );
-
+//Submit Question
+cardButton.addEventListener(
+  "click",
+  (submitQuestion = () => {
+    editBool = false;
+    tempQuestion = question.value.trim();
+    tempAnswer = answer.value.trim();
+    if (!tempQuestion || !tempAnswer) {
+      errorMessage.classList.remove("hide");
+    } else {
+      container.classList.remove("hide");
+      errorMessage.classList.add("hide");
+      viewlist();
+      question.value = "";
+      answer.value = "";
+    }
+  })
+);
 
 //Card Generate
 function viewlist() {
